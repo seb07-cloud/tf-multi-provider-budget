@@ -74,15 +74,15 @@ These variables help control different aspects of your cloud budget management s
 
 The module will deploy resources based on the platforms variable, which should be a list containing either aws, azure, or both.
 
-## sLicense
+## License
 
 This project is licensed under the MIT License - see the LICENSE.md file for details.
 
 Please feel free to contribute and submit PRs. We appreciate your support!
 Authors
 
-    Sebastian W
+    seb07
 
 ## Acknowledgments
 
-    Acknowledge the people or resources that have helped you.
+Acknowledge the people or resources that have helped you.
