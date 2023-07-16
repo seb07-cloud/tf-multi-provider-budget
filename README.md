@@ -6,7 +6,7 @@ The module uses the latest versions of the `hashicorp/aws` and `hashicorp/azurer
 
 ## Prerequisites
 
-- Terraform v1.0.0 or later.
+- Terraform v1.5.0 or later.
 - An AWS account.
 - An Azure account.
 - AWS CLI and Azure CLI configured with appropriate access keys.
