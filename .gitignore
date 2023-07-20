@@ -34,3 +34,4 @@ override.tf.json
 terraform.rc
 
 init.txt
+.DS_Store
