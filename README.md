@@ -23,6 +23,13 @@ The module uses the latest versions of the `hashicorp/aws` and `hashicorp/azurer
 Below is a simple example of how you might use this module in your own Terraform code:
 
 ```hcl
+
+locals {
+  start_of_the_month = formatdate("YYYY-MM-01", timestamp())
+  end_of_month       = formatdate("YYYY-MM", timeadd(timestamp(), "4w")) + "-01"
+}
+
+
 module "azurerm_budget" {
   source = "./modules/azurerm_budget"
 
@@ -42,6 +49,8 @@ module "aws_budget" {
   aws_budget_amount         = 100
   aws_budget_threshold      = 80
   aws_budget_contact_emails = ["devops@example.com"]
+  aws_budget_start_date     = local.start_of_the_month
+  aws_budget_end_date       = local.end_of_month
 }
 ```
 
