@@ -12,3 +12,13 @@ variable "aws_budget_threshold" {
   type        = number
   description = "The threshold of the budget."
 }
+
+variable "aws_budget_start" {
+  type        = string
+  description = "The start of the budget."
+}
+
+variable "aws_budget_end" {
+  type        = string
+  description = "The end of the budget."
+}

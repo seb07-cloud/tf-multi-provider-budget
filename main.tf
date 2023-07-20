@@ -19,6 +19,11 @@ provider "azurerm" {
   features {}
 }
 
+locals {
+  start_of_the_month = formatdate("YYYY-MM-01", timestamp())
+  end_of_month       = formatdate("YYYY-MM", timeadd(timestamp(), "4w")) + "-01"
+}
+
 module "azurerm_budget" {
   source = "./modules/azurerm_budget"
   count  = contains(var.platforms, "azure") ? 1 : 0
@@ -40,5 +45,7 @@ module "aws_budget" {
   aws_budget_amount         = var.aws_budget_amount
   aws_budget_threshold      = var.aws_budget_threshold
   aws_budget_contact_emails = var.aws_budget_contact_emails
-
+  aws_budget_start          = local.start_of_the_month
+  aws_budget_end            = local.end_of_month
 }
+

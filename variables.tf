@@ -63,5 +63,3 @@ variable "aws_budget_threshold" {
   type        = number
   description = "The threshold of the budget."
 }
-
-# Path: modules/azurerm_budget/azurerm_budget.tf

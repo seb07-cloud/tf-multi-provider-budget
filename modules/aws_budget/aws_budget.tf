@@ -3,8 +3,8 @@ resource "aws_budgets_budget" "budget" {
   budget_type       = "COST"
   limit_amount      = var.aws_budget_amount
   limit_unit        = "EUR"
-  time_period_end   = formatdate("YYYY-MM-01", timestamp() + 2629746)
-  time_period_start = formatdate("YYYY-MM-01", timestamp())
+  time_period_end   = var.aws_budget_end
+  time_period_start = var.aws_budget_start
   time_unit         = "MONTHLY"
 
   notification {
